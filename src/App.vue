@@ -1,31 +1,59 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+  <div id="app" class="principal">
+    <span>{{titulo}}</span>
+    <entrada></entrada>
   </div>
 </template>
 
+<script>
+import Entrada from '@/views/entrada.vue' //Importamos el componente
+
+export default {
+  components: {Entrada}, //Agregamos los componentes a usar
+  name:'App', //un nombre al componente puede ser cualquiera
+
+  data(){
+    return{
+      titulo:'Entradas'
+    }
+  }
+  
+}
+</script>
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+  font-size: 62.5% !important; /*10px/16px = 0.625*/
+}
+.principal{
+  background-color: #a21010;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  width: 400px;
+  font-size: 3rem;
   text-align: center;
-  color: #2c3e50;
 }
-#nav {
-  padding: 30px;
+a{
+    text-decoration: none;
+    color: #553f75;
 }
-
-#nav a {
+button{
+  background-color: #553f75;
+  color: white;
+  font-size: 2.4rem;
   font-weight: bold;
-  color: #2c3e50;
+  border-style: none;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 3px 5px;
+  min-width: 35px;
+  cursor: pointer;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+input{
+  border-radius: 5px;
+  font-size: 2.4rem;
+  width:100%;
+  line-height: 4rem;
 }
 </style>
