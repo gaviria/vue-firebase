@@ -1,8 +1,8 @@
 <template>
     <div>
         <anuncio_component></anuncio_component>
-        <cliente_component></cliente_component>
-        <email_component></email_component>
+        <cliente_component :email="email"></cliente_component>
+        <email_component :emailRecibido="email"></email_component>
         <firma_component></firma_component>
         <boletos_component></boletos_component>
         
@@ -23,6 +23,11 @@ export default {
         boletos_component,
         firma_component,
         email_component
+    },
+    data(){
+        return{
+            email:'newton@email.com'
+        }
     }
 }
 </script>

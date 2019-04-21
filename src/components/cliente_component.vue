@@ -13,11 +13,17 @@
         <div class="atributo">
             <span>Edad: {{edad}}</span>
         </div>
+        <div class="atributo">
+            <span>
+                {{email}}
+            </span>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
+    props:['email'],
     data(){
         return{
             nombres: 'Isaac',
