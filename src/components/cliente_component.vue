@@ -48,6 +48,9 @@ export default {
             return Math.floor(diferencia / (1000*60*60*24*365 ));
         }
     },
+    created() {
+        this.$emit('onCambioEmail','newton@email.com')
+    },
 }
 </script>
 

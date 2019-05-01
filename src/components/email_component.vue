@@ -16,11 +16,13 @@ export default {
     },
     methods: {
         actualizarEmail(event){
-            
+            this.$emit('onCambioEmail',this.email);
         }
-    },
-    created() {
-        this.email = this.emailRecibido
+    }, //watch nos permite ver una variable que cambia en el padre
+    watch: {
+        emailRecibido(){
+            this.email = this.emailRecibido
+        }
     },
 }
 </script>
